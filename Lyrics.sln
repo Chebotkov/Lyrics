@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsImplementer", "LyricsImplementer\LyricsImplementer.csproj", "{BF7AD3DE-48C5-40F0-8B7C-CA9769842C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsImplementer.Tests", "LyricsImplementer.Tests\LyricsImplementer.Tests.csproj", "{464A6371-3F4D-4F42-AD15-13E9B8868984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF7AD3DE-48C5-40F0-8B7C-CA9769842C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AD3DE-48C5-40F0-8B7C-CA9769842C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AD3DE-48C5-40F0-8B7C-CA9769842C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7AD3DE-48C5-40F0-8B7C-CA9769842C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1141E51-3304-4AAC-B014-FE6E4A8E676C}
+	EndGlobalSection
+EndGlobal

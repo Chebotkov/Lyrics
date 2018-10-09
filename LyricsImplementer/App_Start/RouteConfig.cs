@@ -16,7 +16,7 @@ namespace LyricsImplementer
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Main", action = "Authorization", id = UrlParameter.Optional }
+                defaults: new { controller = "Main", action = "MainPage", id = UrlParameter.Optional }
             );
         }
     }

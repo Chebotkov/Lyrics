@@ -1,0 +1,30 @@
+﻿@using LyricsImplementer.Models;
+@{
+	ViewBag.Title = ViewBag.Song.Name;
+	Song song = ViewBag.Song;
+}
+<body>
+	<table>
+		<caption><b>@String.Format("Перевод песни {0} - {1}", song.Artist.Name, song.Name) </b></caption>
+		<tbody>
+			@{
+				string[] englishText = song.EnglishText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+				string[] russianText = song.RussianText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+				for (int i = 0; i < englishText.Length; i++)
+				{
+					<tr>
+						<td>@englishText[i]</td>
+						<td>@russianText[i]</td>
+					</tr>
+				}
+			}
+		</tbody>
+
+		<tfoot>
+		<th colspan="3"><br />Author of the translation: @song.User.Nickname</th>
+		</tfoot>
+
+	</table>
+</body>
+

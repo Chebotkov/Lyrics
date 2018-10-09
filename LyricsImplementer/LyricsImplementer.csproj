@@ -148,7 +148,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthorizationController.cs" />
+    <Compile Include="Controllers\LyricsAndTranslationController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,11 +201,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Main\Create.cshtml" />
-    <Content Include="Views\Main\Delete.cshtml" />
-    <Content Include="Views\Main\Details.cshtml" />
-    <Content Include="Views\Main\Edit.cshtml" />
-    <Content Include="Views\Main\Authorization.cshtml" />
+    <Content Include="Views\Main\MainPage.cshtml" />
+    <Content Include="Views\Registration\NewUser.cshtml" />
+    <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\LyricsAndTranslation\SongText.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

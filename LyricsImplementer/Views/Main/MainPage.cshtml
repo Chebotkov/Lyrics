@@ -1,0 +1,36 @@
+﻿@using LyricsImplementer.Models;
+@{
+	ViewBag.Title = "Lyrics";
+}
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+	<table>
+		<caption><b>First added songs</b></caption>
+		<tbody>
+			@{
+				int i = 0;
+				string name = "";
+				foreach (Song song in ViewBag.Songs)
+				{
+					name = String.Format("{0} - {1}", song.Artist.Name, song.Name);
+					<td><a href="/LyricsAndTranslation/SongText/@song.Id">@name</a></td>
+					i++;
+					if (i == 2)
+					{
+					<br />
+					i = 0;
+					}
+				}
+			}
+			</tbody>
+
+			<tfoot>
+				<th colspan="3"><br />These site contains lyrics translations of various songs.</th>
+			</tfoot>
+
+		</table>
+	</body>
+

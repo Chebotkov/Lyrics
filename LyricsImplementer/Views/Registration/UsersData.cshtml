@@ -1,0 +1,43 @@
+﻿@{
+	Layout = null;
+}
+
+@model LyricsImplementer.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+</head>
+
+@using (Html.BeginForm("UsersData", "Registration", FormMethod.Post))
+{
+<fieldset>
+	@Html.HiddenFor(u => u.Id)
+	<p>
+		@Html.LabelFor(u => u.Surname, "Enter your surname")
+		<br />
+		@Html.EditorFor(u => u.Surname)
+	</p>
+	<p>
+		@Html.LabelFor(u => u.Name, "Enter your name")
+		<br />
+		@Html.EditorFor(u => u.Name)
+	</p>
+	<p>
+		@Html.LabelFor(u => u.Patronymic, "Enter your patronymic")
+		<br />
+		@Html.EditorFor(u => u.Patronymic)
+	</p>
+
+	<p>
+		@Html.LabelFor(u => u.Nickname, "Enter your nickname")
+		<br />
+		@Html.EditorFor(u => u.Nickname)
+		@Html.ValidationMessageFor(u => u.Nickname)
+	</p>
+	<p><input type="submit" value="Send" /></p>
+</fieldset>
+}

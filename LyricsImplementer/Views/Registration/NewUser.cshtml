@@ -1,7 +1,45 @@
-﻿
-@{
-    ViewBag.Title = "Registration";
+﻿@{
+	Layout = null;
 }
 
-<h2>Registration</h2>
+@model LyricsImplementer.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+</head>
+
+@using (Html.BeginForm("NewUser", "Registration", FormMethod.Post))
+{
+	<fieldset>
+		@Html.HiddenFor(u => u.Id)
+		<p>
+			@Html.LabelFor(u => u.Email, "Enter your email")
+			<br />
+			@Html.EditorFor(u => u.Email)
+			@Html.ValidationMessageFor(u => u.Email)
+		</p>
+		<p>
+			@Html.LabelFor(u => u.Login, "Enter your login")
+			<br />
+			@Html.EditorFor(u => u.Login)
+			@Html.ValidationMessageFor(u => u.Login)
+		</p>
+		<p>
+			@Html.LabelFor(u => u.Password, "Enter your password")
+			<br />
+			@Html.EditorFor(u => u.Password)
+		</p>
+		<p>
+			@Html.LabelFor(u => u.PasswordConfirm, "Confirm your password")
+			<br />
+			@Html.EditorFor(u => u.PasswordConfirm)
+			@Html.ValidationMessageFor(u => u.PasswordConfirm)
+		</p>
+		<p><input type="submit" value="Send" /></p>
+	</fieldset>
+}
 

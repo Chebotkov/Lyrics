@@ -205,6 +205,8 @@
     <Content Include="Views\Registration\NewUser.cshtml" />
     <Content Include="Views\Authorization\Index.cshtml" />
     <Content Include="Views\LyricsAndTranslation\SongText.cshtml" />
+    <Content Include="Views\Registration\UsersData.cshtml" />
+    <Content Include="Views\Registration\Success.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

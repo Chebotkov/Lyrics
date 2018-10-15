@@ -7,8 +7,11 @@ namespace LyricsImplementer.Models
 {
     public class Album
     {
-        public string Id { get; set; }
+        public string AlbumId { get; set; }
         public string Name { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string Length { get; set; }
+        public string Notation { get; set; }
 
         //list of songs
     }

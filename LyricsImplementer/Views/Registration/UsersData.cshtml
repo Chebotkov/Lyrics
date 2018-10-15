@@ -15,7 +15,7 @@
 @using (Html.BeginForm("UsersData", "Registration", FormMethod.Post))
 {
 <fieldset>
-	@Html.HiddenFor(u => u.Id)
+	@Html.HiddenFor(u => u.UserId)
 	<p>
 		@Html.LabelFor(u => u.Surname, "Enter your surname")
 		<br />

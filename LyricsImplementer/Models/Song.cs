@@ -7,15 +7,14 @@ namespace LyricsImplementer.Models
 {
     public class Song
     {
-        public int Id { get; set; }
+        public int SongId { get; set; }
         public int ArtistId { get; set; }
         public string Name { get; set; }
-        public int? GenreId { get; set; }
         public int? AlbumId { get; set; }
-        public string EnglishText { get; set; }
-        public string RussianText { get; set; }
         public int UserId { get; set; }
         public int Rating { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string Notation { get; set; }
 
         public Genre Genre { get; set; }
         //public Album ArtistAlbum { get; set; }

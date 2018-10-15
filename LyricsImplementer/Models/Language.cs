@@ -5,9 +5,9 @@ using System.Web;
 
 namespace LyricsImplementer.Models
 {
-    public class Genre
+    public class Language
     {
-        public int GenreId { get; set; }
-        public string Name { get; set; }
+        public int LanguageId { get; set; }
+        public string LanguageName { get; set; }
     }
 }

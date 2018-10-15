@@ -10,7 +10,7 @@ namespace LyricsImplementer.Models
     public class User
     {
         [ScaffoldColumn(false)]
-        public int Id { get; set; }
+        public int UserId { get; set; }
         [Required (ErrorMessage = "Обязательное поле")]
         [Display(Name = "Логин")]
         [Remote("CheckLogin", "Registration", ErrorMessage = "Login is already exist.")]

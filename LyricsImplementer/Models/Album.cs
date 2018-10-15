@@ -12,7 +12,8 @@ namespace LyricsImplementer.Models
         public DateTime ReleaseDate { get; set; }
         public string Length { get; set; }
         public string Notation { get; set; }
-
-        //list of songs
+                
+        public virtual ICollection<Artist> Artists { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }

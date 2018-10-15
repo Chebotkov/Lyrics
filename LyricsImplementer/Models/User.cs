@@ -15,8 +15,8 @@ namespace LyricsImplementer.Models
         [Display(Name = "Логин")]
         [Remote("CheckLogin", "Registration", ErrorMessage = "Login is already exist.")]
         public string Login { get; set; }
-        [Required(ErrorMessage = "Обязательное поле")]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Обязательное поле")]        [DataType(DataType.Password)]
+
         [Display(Name = "Пароль")]
         public string Password { get; set; }
         [Required(ErrorMessage = "Обязательное поле")]
@@ -28,6 +28,7 @@ namespace LyricsImplementer.Models
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный адрес")]
         [Remote("CheckEmail", "Registration", ErrorMessage = "User with this email is already exist.")]
         public string Email { get; set; }
+        public int SongId { get; set; }
 
         public string Surname { get; set; }
         public string Name { get; set; }
@@ -39,5 +40,7 @@ namespace LyricsImplementer.Models
         public string PasswordConfirm { get; set; }
 
         public DateTime RegistrationDate { get; set; }
+
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }

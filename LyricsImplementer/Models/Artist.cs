@@ -17,6 +17,7 @@ namespace LyricsImplementer.Models
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Patronymic { get; set; }
-        //list of songs
+
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }

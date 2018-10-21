@@ -10,6 +10,6 @@ namespace LyricsImplementer.Models
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
 
-        public virtual ICollection<SongLyrics> SongLyrics { get; set; } 
+        public virtual ICollection<Lyrics> LyricsList { get; set; }
     }
 }

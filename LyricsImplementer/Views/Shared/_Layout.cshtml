@@ -4,17 +4,20 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet">
 	<title>@ViewBag.Title</title>
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<ul id="main">
-				<li style="display:inline">@Html.ActionLink("Home", "MainPage", "Main")</li> |
-				<li style="display:inline">@Html.ActionLink("Sign in", "Index", "Authorization")</li> |
-				<li style="display:inline">@Html.ActionLink("Sign up", "NewUser", "Registration")</li> |
+
+	<div id="header">
+		<h1>You can find the translations of your favourite songs here.</h1>
+		<div id="nav">
+			<ul>
+				<li>@Html.ActionLink("Home", "MainPage", "Main")</li>
+				<li>@Html.ActionLink("Sign in", "Index", "Authorization")</li>
+				<li>@Html.ActionLink("Sign up", "NewUser", "Registration")</li>
 			</ul>
 		</div>
 	</div>
@@ -31,7 +34,7 @@
 								foreach (Song song in ViewBag.PopularSongs)
 								{
 									<tr>
-										<td><a href="/LyricsAndTranslation/SongText/@song.Id">@String.Format("{0} - {1}", song.Artist.Name, song.Name)</a></td>
+										<td><a href="/LyricsAndTranslation/SongText/@song.SongId">@String.Format("{0} - {1}", song.Artists.ToList()[0].Name, song.Name)</a></td>
 									</tr>
 								}
 							}

@@ -17,8 +17,9 @@ namespace LyricsImplementer.Models
         public Album Album { get; set; }
         public virtual ICollection<Artist> Artists { get; set; }
         public virtual ICollection<Genre> Genres { get; set; }
-        public virtual ICollection<SongLyrics> SongLyrics { get; set; }
         public int? UserId { get; set; }
         public User User { get; set; }
+
+        public virtual ICollection<Lyrics> LyricsList { get; set; }
     }
 }

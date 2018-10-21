@@ -21,11 +21,10 @@ namespace LyricsImplementer.Controllers
             }
 
             Song song = context.Songs.Find(id);
-            song.Artist = context.Artists.Find(song.ArtistId);
-            song.User = context.Users.Find(song.UserId);
             if (song != null)
             {
-                ViewBag.PopularSongs = context.Songs.Take(10).Include(s => s.Artist).AsNoTracking();
+                ViewBag.PopularSongs = context.Songs.Take(10).AsNoTracking();
+
                 ViewBag.Song = song;
                 return View();
             }

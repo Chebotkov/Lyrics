@@ -20,8 +20,8 @@ namespace LyricsImplementer.Controllers
         [HttpGet]
         public ActionResult MainPage()
         {
-            var PopularSongs = context.Songs.Take(10).Include(song => song.Artist).AsNoTracking();
-            var Songs = context.Songs.Include(song => song.Artist).AsNoTracking();
+            var PopularSongs = context.Songs.Take(10).Include(s => s.Artists).AsNoTracking();
+            var Songs = context.Songs.Include(s => s.Artists).AsNoTracking();
             ViewBag.Songs = Songs;
             ViewBag.PopularSongs = PopularSongs;
             return View();

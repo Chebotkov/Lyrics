@@ -157,6 +157,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810211621173_firstMigration.cs" />
+    <Compile Include="Migrations\201810211621173_firstMigration.Designer.cs">
+      <DependentUpon>201810211621173_firstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -215,7 +220,11 @@
     <Content Include="Views\Registration\UsersData.cshtml" />
     <Content Include="Views\Registration\Success.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810211621173_firstMigration.resx">
+      <DependentUpon>201810211621173_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

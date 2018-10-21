@@ -9,6 +9,9 @@ namespace LyricsImplementer.Models
 {
     public class LyricsDBContext : DbContext
     {
+        public LyricsDBContext() : base ("LyricsDBContext")
+        { }
+
         public DbSet<Album> Albums { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Genre> Genres { get; set; }
@@ -18,7 +21,7 @@ namespace LyricsImplementer.Models
         public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        { 
+        {
             modelBuilder.Configurations.Add(new ArtistConfiguration());
             modelBuilder.Configurations.Add(new GenreConfiguration());
             modelBuilder.Configurations.Add(new LyricsConfiguration());
@@ -33,15 +36,21 @@ namespace LyricsImplementer.Models
         {
             HasMany(l => l.Songs)
                 .WithMany(s => s.LyricsList)
-                .Map(t => t.MapLeftKey("LyricsId")
-                .MapRightKey("SongId")
-                .ToTable("LyricsSong"));
+                .Map(t =>
+                {
+                    t.MapLeftKey("LyricsId");
+                    t.MapRightKey("SongId");
+                    t.ToTable("LyricsSong");
+                });
 
             HasMany(l => l.Languages)
                 .WithMany(l => l.LyricsList)
-                .Map(t => t.MapLeftKey("LyricsId")
-                .MapRightKey("LanguageId")
-                .ToTable("LyricsLanguage"));
+                .Map(t =>
+                {
+                    t.MapLeftKey("LyricsId");
+                    t.MapRightKey("LanguageId");
+                    t.ToTable("LyricsLanguage");
+                });
         }
     }
 

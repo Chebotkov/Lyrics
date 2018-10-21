@@ -15,7 +15,7 @@
 				string name = "";
 				foreach (Song song in ViewBag.Songs)
 				{
-					name = String.Format("{0} - {1}", song.Artists.ToList()[0].Name, song.Name);
+					name = String.Format("{0} - {1}", song.Artists.ToList()[0].Nickname, song.Name);
 					<td><a href="/LyricsAndTranslation/SongText/@song.SongId">@name</a></td>
 					i++;
 					if (i == 2)

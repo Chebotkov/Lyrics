@@ -34,7 +34,7 @@
 								foreach (Song song in ViewBag.PopularSongs)
 								{
 									<tr>
-										<td><a href="/LyricsAndTranslation/SongText/@song.SongId">@String.Format("{0} - {1}", song.Artists.ToList()[0].Name, song.Name)</a></td>
+										<td><a href="/LyricsAndTranslation/SongText/@song.SongId">@String.Format("{0} - {1}", song.Artists.ToList()[0].Nickname, song.Name)</a></td>
 									</tr>
 								}
 							}

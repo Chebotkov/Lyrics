@@ -1,4 +1,5 @@
 ﻿@using LyricsImplementer.Models;
+@using LyricsImplementer.Classes;
 @{
 	ViewBag.Title = "Lyrics";
 }
@@ -15,7 +16,7 @@
 				string name = "";
 				foreach (Song song in ViewBag.Songs)
 				{
-					name = String.Format("{0} - {1}", song.Artists.ToList()[0].Nickname, song.Name);
+					name = String.Format("{0} - {1}", Helper.GetArtists(song.Artists), song.Name);
 					<td><a href="/LyricsAndTranslation/SongText/@song.SongId">@name</a></td>
 					i++;
 					if (i == 2)
@@ -26,11 +27,6 @@
 				}
 			}
 			</tbody>
-
-			<tfoot>
-				<th colspan="3"><br />These site contains lyrics translations of various songs.</th>
-			</tfoot>
-
 		</table>
 	</body>
 

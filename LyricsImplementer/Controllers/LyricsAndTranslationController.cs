@@ -11,6 +11,8 @@ namespace LyricsImplementer.Controllers
     public class LyricsAndTranslationController : Controller
     {
         private LyricsDBContext context = new LyricsDBContext();
+        private int englishText = 1;
+        private int russianText = 2;
 
         [HttpGet]
         public ActionResult SongText(int? id)
@@ -25,7 +27,11 @@ namespace LyricsImplementer.Controllers
             {
                 ViewBag.PopularSongs = context.Songs.Take(10).AsNoTracking();
 
-                ViewBag.Song = song;
+                ViewBag.Song = context.Songs.Where(s => s.SongId == id).Include(s => s.LyricsList).Select(s => new
+                {
+                    Name = s.Name,
+                    Artists = s.Artists,
+                });
                 return View();
             }
             return HttpNotFound();

@@ -31,6 +31,14 @@ namespace LyricsImplementer.Controllers
                 ss.User = context.Users.Find(ss.UserId);
                 ViewBag.Song = ss;
 
+<<<<<<< HEAD
+=======
+                ViewBag.Song = context.Songs.Where(s => s.SongId == id).Include(s => s.LyricsList).Select(s => new
+                {
+                    Name = s.Name,
+                    Artists = s.Artists,
+                });
+>>>>>>> 612173efd263599ab6f0f686f4963edd2e53feea
                 return View();
             }
             return HttpNotFound();

@@ -10,6 +10,7 @@
 		<caption><b>@String.Format("Перевод песни {0} - {1}", Helper.GetArtists(song.Artists), song.Name) </b></caption>
 		<tbody>
 			@{
+<<<<<<< HEAD
 				var originalText = Editor.GetText(song.LyricsList.FirstOrDefault(l => l.LanguageId == 1).Text);
 				var translation = Editor.GetText(song.LyricsList.FirstOrDefault(l => l.LanguageId == 2).Text);
 
@@ -29,6 +30,17 @@
 							<td>@translation[i]</td>
 						</tr>
 					}
+=======
+				var originalText = Editor.GetText("");
+				var translation = Editor.GetText("");
+
+				for (int i = 0; i < originalText.Length; i++)
+				{
+					<tr>
+						<td>@originalText[i]</td>
+						<td>@translation[i]</td>
+					</tr>
+>>>>>>> 612173efd263599ab6f0f686f4963edd2e53feea
 				}
 			}
 		</tbody>

@@ -10,36 +10,45 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration</title>
+	<h2>Register</h2>
+
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
 </head>
 
-@using (Html.BeginForm("NewUser", "Registration", FormMethod.Post))
-{
-	<fieldset>
-		@Html.HiddenFor(u => u.Id)
-		<p>
-			@Html.LabelFor(u => u.Email, "Enter your email")
-			<br />
-			@Html.EditorFor(u => u.Email)
-			@Html.ValidationMessageFor(u => u.Email)
-		</p>
-		<p>
-			@Html.LabelFor(u => u.Login, "Enter your login")
-			<br />
-			@Html.EditorFor(u => u.Login)
-			@Html.ValidationMessageFor(u => u.Login)
-		</p>
-		<p>
-			@Html.LabelFor(u => u.Password, "Enter your password")
-			<br />
-			@Html.EditorFor(u => u.Password)
-		</p>
-		<p>
-			@Html.LabelFor(u => u.PasswordConfirm, "Confirm your password")
-			<br />
-			@Html.EditorFor(u => u.PasswordConfirm)
-			@Html.ValidationMessageFor(u => u.PasswordConfirm)
-		</p>
-		<p><input type="submit" value="Send" /></p>
-	</fieldset>
-}
+<body>
+	@using (Html.BeginForm("NewUser", "Registration", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+	{
+		@Html.AntiForgeryToken()
+		<h4>Create a new account.</h4>
+		<hr />
+		@Html.ValidationSummary()
+		<div class="form-group">
+			@Html.LabelFor(u => u.Nickname, new { @class = "col-md-2 control-label" })
+			<div class="col-md-10">
+				@Html.TextBoxFor(u => u.Nickname, new { @class = "form-control" })
+			</div>
+		</div>
+		<div class="form-group">
+			@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+			<div class="col-md-10">
+				@Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+			</div>
+		</div>
+		<div class="form-group">
+			@Html.LabelFor(m => m.PasswordConfirm, new { @class = "col-md-2 control-label" })
+			<div class="col-md-10">
+				@Html.PasswordFor(m => m.PasswordConfirm, new { @class = "form-control" })
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" class="btn btn-default" value="Register" />
+			</div>
+		</div>
+	}
 
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

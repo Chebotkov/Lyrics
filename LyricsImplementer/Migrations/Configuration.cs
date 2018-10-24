@@ -9,7 +9,7 @@ namespace LyricsImplementer.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(LyricsImplementer.Models.LyricsDBContext context)

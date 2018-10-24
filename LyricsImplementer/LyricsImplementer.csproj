@@ -150,6 +150,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\Helper.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\LyricsAndTranslationController.cs" />
     <Compile Include="Controllers\MainController.cs" />
@@ -160,6 +161,18 @@
     <Compile Include="Migrations\201810211621173_firstMigration.cs" />
     <Compile Include="Migrations\201810211621173_firstMigration.Designer.cs">
       <DependentUpon>201810211621173_firstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810241603563_ChangedLyrics.cs" />
+    <Compile Include="Migrations\201810241603563_ChangedLyrics.Designer.cs">
+      <DependentUpon>201810241603563_ChangedLyrics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810241654039_Field SongId in User was deleted.cs" />
+    <Compile Include="Migrations\201810241654039_Field SongId in User was deleted.Designer.cs">
+      <DependentUpon>201810241654039_Field SongId in User was deleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810241708231_aaaaa.cs" />
+    <Compile Include="Migrations\201810241708231_aaaaa.Designer.cs">
+      <DependentUpon>201810241708231_aaaaa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
@@ -224,6 +237,15 @@
     <EmbeddedResource Include="Migrations\201810211621173_firstMigration.resx">
       <DependentUpon>201810211621173_firstMigration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241603563_ChangedLyrics.resx">
+      <DependentUpon>201810241603563_ChangedLyrics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241654039_Field SongId in User was deleted.resx">
+      <DependentUpon>201810241654039_Field SongId in User was deleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241708231_aaaaa.resx">
+      <DependentUpon>201810241708231_aaaaa.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -237,6 +259,12 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LyricsBL\LyricsBL.csproj">
+      <Project>{b6d40bff-e73a-4a0e-9160-515d7487f648}</Project>
+      <Name>LyricsBL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

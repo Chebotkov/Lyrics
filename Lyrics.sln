@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsImplementer", "Lyrics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsImplementer.Tests", "LyricsImplementer.Tests\LyricsImplementer.Tests.csproj", "{464A6371-3F4D-4F42-AD15-13E9B8868984}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsBL", "LyricsBL\LyricsBL.csproj", "{B6D40BFF-E73A-4A0E-9160-515D7487F648}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{464A6371-3F4D-4F42-AD15-13E9B8868984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D40BFF-E73A-4A0E-9160-515D7487F648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D40BFF-E73A-4A0E-9160-515D7487F648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D40BFF-E73A-4A0E-9160-515D7487F648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D40BFF-E73A-4A0E-9160-515D7487F648}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

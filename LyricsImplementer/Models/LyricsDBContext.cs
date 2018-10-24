@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Web;
@@ -24,33 +25,8 @@ namespace LyricsImplementer.Models
         {
             modelBuilder.Configurations.Add(new ArtistConfiguration());
             modelBuilder.Configurations.Add(new GenreConfiguration());
-            modelBuilder.Configurations.Add(new LyricsConfiguration());
 
             base.OnModelCreating(modelBuilder);
-        }
-    }
-
-    public class LyricsConfiguration : EntityTypeConfiguration<Lyrics>
-    {
-        public LyricsConfiguration()
-        {
-            HasMany(l => l.Songs)
-                .WithMany(s => s.LyricsList)
-                .Map(t =>
-                {
-                    t.MapLeftKey("LyricsId");
-                    t.MapRightKey("SongId");
-                    t.ToTable("LyricsSong");
-                });
-
-            HasMany(l => l.Languages)
-                .WithMany(l => l.LyricsList)
-                .Map(t =>
-                {
-                    t.MapLeftKey("LyricsId");
-                    t.MapRightKey("LanguageId");
-                    t.ToTable("LyricsLanguage");
-                });
         }
     }
 
